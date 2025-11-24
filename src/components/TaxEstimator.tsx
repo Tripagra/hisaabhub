@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { Calculator, RefreshCw, Info } from 'lucide-react';
+
+import { useState, useEffect } from 'react';
+import { Calculator, RefreshCw } from 'lucide-react';
 
 const TaxEstimator = () => {
     const [income, setIncome] = useState<number | ''>('');
