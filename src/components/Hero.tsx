@@ -14,11 +14,11 @@ const Hero: React.FC<HeroProps> = ({ onFileITR, onExpert }) => {
                     <main className="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
                         <div className="sm:text-center lg:text-left">
                             <h1 className="text-4xl tracking-tight font-extrabold text-white sm:text-5xl md:text-6xl">
-                                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-primary via-yellow-200 to-primary">HisabHub</span>
+                                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-primary via-yellow-200 to-primary">HisaabHub</span>
                                 <span className="block xl:inline">India's Most Trusted Tax Platform</span>
                             </h1>
                             <p className="mt-3 text-base text-slate-400 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
-                                Maximize your refunds and file your ITR in minutes. Join over 1 million Indians who trust HisabHub for their financial planning and tax filing.
+                                Maximize your refunds and file your ITR in minutes. Join over 1 million Indians who trust HisaabHub for their financial planning and tax filing.
                             </p>
                             <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
                                 <div className="rounded-md shadow">

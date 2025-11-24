@@ -129,8 +129,8 @@ const GSTPage: React.FC<GSTPageProps> = ({ onGetStarted }) => {
                                 key={type.id}
                                 onClick={() => setSelectedGSTType(type.id)}
                                 className={`bg-dark-surface border-2 rounded-xl p-5 sm:p-6 cursor-pointer transition-all active:scale-95 sm:hover:-translate-y-2 ${selectedGSTType === type.id
-                                        ? 'border-primary shadow-lg shadow-primary/20'
-                                        : 'border-white/10 hover:border-primary/50'
+                                    ? 'border-primary shadow-lg shadow-primary/20'
+                                    : 'border-white/10 hover:border-primary/50'
                                     }`}
                             >
                                 <div className="flex items-center mb-4">
@@ -290,7 +290,7 @@ const GSTPage: React.FC<GSTPageProps> = ({ onGetStarted }) => {
             {/* Why Choose Us Section */}
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
                 <div className="text-center mb-8 sm:mb-12">
-                    <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-3 sm:mb-4 px-2">Why Choose HisabHub for GST?</h2>
+                    <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-3 sm:mb-4 px-2">Why Choose HisaabHub for GST?</h2>
                     <p className="text-slate-400 text-base sm:text-lg px-4">Your trusted partner for GST compliance</p>
                 </div>
 

@@ -16,14 +16,14 @@ const TermsOfService = () => {
                         <section>
                             <h2 className="text-xl font-bold text-white mb-4">1. Agreement to Terms</h2>
                             <p>
-                                These Terms of Service constitute a legally binding agreement made between you, whether personally or on behalf of an entity ("you") and HisabHub ("we," "us" or "our"), concerning your access to and use of the HisabHub website as well as any other media form, media channel, mobile website or mobile application related, linked, or otherwise connected thereto (collectively, the "Site").
+                                These Terms of Service constitute a legally binding agreement made between you, whether personally or on behalf of an entity ("you") and HisaabHub ("we," "us" or "our"), concerning your access to and use of the HisaabHub website as well as any other media form, media channel, mobile website or mobile application related, linked, or otherwise connected thereto (collectively, the "Site").
                             </p>
                         </section>
 
                         <section>
                             <h2 className="text-xl font-bold text-white mb-4">2. Services Provided</h2>
                             <p>
-                                HisabHub provides an online platform for income tax filing, GST registration and filing, and other financial services. We act as an intermediary to facilitate the filing of your tax returns with the Income Tax Department of India. We do not guarantee the acceptance of your return by the tax authorities, which is subject to their verification and processing.
+                                HisaabHub provides an online platform for income tax filing, GST registration and filing, and other financial services. We act as an intermediary to facilitate the filing of your tax returns with the Income Tax Department of India. We do not guarantee the acceptance of your return by the tax authorities, which is subject to their verification and processing.
                             </p>
                         </section>
 
@@ -63,7 +63,7 @@ const TermsOfService = () => {
                         <section>
                             <h2 className="text-xl font-bold text-white mb-4">7. Governing Law</h2>
                             <p>
-                                These Terms shall be governed by and defined following the laws of India. HisabHub and yourself irrevocably consent that the courts of Agra, Uttar Pradesh shall have exclusive jurisdiction to resolve any dispute which may arise in connection with these terms.
+                                These Terms shall be governed by and defined following the laws of India. HisaabHub and yourself irrevocably consent that the courts of Agra, Uttar Pradesh shall have exclusive jurisdiction to resolve any dispute which may arise in connection with these terms.
                             </p>
                         </section>
 
@@ -73,10 +73,10 @@ const TermsOfService = () => {
                                 In order to resolve a complaint regarding the Site or to receive further information regarding use of the Site, please contact us at:
                             </p>
                             <address className="mt-4 not-italic text-slate-400">
-                                HisabHub Financial Services<br />
+                                HisaabHub Financial Services<br />
                                 4/225, Blauganj<br />
                                 Agra, Uttar Pradesh, India<br />
-                                Email: support@hisabhub.com
+                                Email: support@hisaabhub.com
                             </address>
                         </section>
                     </div>

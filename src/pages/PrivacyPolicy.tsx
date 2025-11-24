@@ -16,7 +16,7 @@ const PrivacyPolicy = () => {
                         <section>
                             <h2 className="text-xl font-bold text-white mb-4">1. Introduction</h2>
                             <p>
-                                Welcome to HisabHub ("we," "our," or "us"). We are committed to protecting your privacy and ensuring the security of your personal and financial information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website and use our services.
+                                Welcome to HisaabHub ("we," "our," or "us"). We are committed to protecting your privacy and ensuring the security of your personal and financial information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website and use our services.
                             </p>
                         </section>
 
@@ -66,10 +66,10 @@ const PrivacyPolicy = () => {
                         <section>
                             <h2 className="text-xl font-bold text-white mb-4">7. Contact Us</h2>
                             <p>
-                                If you have questions or comments about this policy, you may email us at support@hisabhub.com or by post to:
+                                If you have questions or comments about this policy, you may email us at support@hisaabhub.com or by post to:
                             </p>
                             <address className="mt-4 not-italic text-slate-400">
-                                HisabHub Financial Services<br />
+                                HisaabHub Financial Services<br />
                                 4/225, Blauganj<br />
                                 Agra, Uttar Pradesh, India
                             </address>

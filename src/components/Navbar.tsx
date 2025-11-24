@@ -48,7 +48,7 @@ const Navbar: React.FC<NavbarProps> = ({ onLogin, onRegister }) => {
                         <div onClick={handleLogoClick} className="flex-shrink-0 flex items-center cursor-pointer">
                             <img
                                 src="/assets/Group 26 (1).svg"
-                                alt="HisabHub - Accountancy Firm"
+                                alt="HisaabHub - Accountancy Firm"
                                 className="h-16 w-auto object-contain"
                             />
                         </div>
@@ -93,7 +93,7 @@ const Navbar: React.FC<NavbarProps> = ({ onLogin, onRegister }) => {
                         <div onClick={handleLogoClick} className="absolute left-1/2 transform -translate-x-1/2 cursor-pointer">
                             <img
                                 src="/assets/Group 26 (1).svg"
-                                alt="HisabHub"
+                                alt="HisaabHub"
                                 className="h-12 w-auto object-contain"
                             />
                         </div>
@@ -127,7 +127,7 @@ const Navbar: React.FC<NavbarProps> = ({ onLogin, onRegister }) => {
                 <div className="flex items-center justify-between p-4 border-b border-white/10 bg-gradient-to-r from-primary/10 to-transparent">
                     <img
                         src="/assets/Group 26 (1).svg"
-                        alt="HisabHub"
+                        alt="HisaabHub"
                         className="h-12 w-auto object-contain"
                     />
                     <button

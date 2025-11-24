@@ -13,7 +13,7 @@ const AboutUs = () => {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
                     <div className="text-center">
                         <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                            About <span className="text-primary">HisabHub</span>
+                            About <span className="text-primary">HisaabHub</span>
                         </h1>
                         <p className="text-xl text-slate-400 max-w-3xl mx-auto">
                             Simplifying finances for millions of Indians. We are on a mission to make tax filing and financial planning accessible, accurate, and stress-free.
@@ -98,7 +98,7 @@ const AboutUs = () => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
                 <div className="text-center mb-12">
                     <h2 className="text-3xl font-bold text-white mb-4">Meet Our Team</h2>
-                    <p className="text-slate-400">The minds behind HisabHub</p>
+                    <p className="text-slate-400">The minds behind HisaabHub</p>
                 </div>
                 {/* Add team members here if needed */}
                 <div className="text-center text-slate-500 italic">

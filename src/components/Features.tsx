@@ -43,7 +43,7 @@ const Features: React.FC<FeaturesProps> = ({ onAction }) => {
                         Everything you need for your finances
                     </p>
                     <p className="mt-4 max-w-2xl text-xl text-slate-400 mx-auto">
-                        From tax filing to GST compliance, HisabHub offers a comprehensive suite of financial tools.
+                        From tax filing to GST compliance, HisaabHub offers a comprehensive suite of financial tools.
                     </p>
                 </div>
 

@@ -16,7 +16,7 @@ const RefundPolicy = () => {
                         <section>
                             <h2 className="text-xl font-bold text-white mb-4">1. General Policy</h2>
                             <p>
-                                At HisabHub, we strive to ensure 100% customer satisfaction. However, if you are not satisfied with our services, we are here to help. This Refund Policy outlines the circumstances under which you may be eligible for a refund.
+                                At HisaabHub, we strive to ensure 100% customer satisfaction. However, if you are not satisfied with our services, we are here to help. This Refund Policy outlines the circumstances under which you may be eligible for a refund.
                             </p>
                         </section>
 
@@ -45,7 +45,7 @@ const RefundPolicy = () => {
                         <section>
                             <h2 className="text-xl font-bold text-white mb-4">4. Refund Process</h2>
                             <p>
-                                To request a refund, please email us at support@hisabhub.com with your order details and the reason for the refund. Our team will review your request within 3-5 business days. If approved, the refund will be processed to your original method of payment within 7-10 business days.
+                                To request a refund, please email us at support@hisaabhub.com with your order details and the reason for the refund. Our team will review your request within 3-5 business days. If approved, the refund will be processed to your original method of payment within 7-10 business days.
                             </p>
                         </section>
 
@@ -55,10 +55,10 @@ const RefundPolicy = () => {
                                 If you have any questions about our Refund Policy, please contact us:
                             </p>
                             <address className="mt-4 not-italic text-slate-400">
-                                HisabHub Financial Services<br />
+                                HisaabHub Financial Services<br />
                                 4/225, Blauganj<br />
                                 Agra, Uttar Pradesh, India<br />
-                                Email: support@hisabhub.com
+                                Email: support@hisaabhub.com
                             </address>
                         </section>
                     </div>

@@ -7,7 +7,7 @@ const Footer = () => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
                     <div>
-                        <h3 className="text-2xl font-bold text-primary mb-4">HisabHub</h3>
+                        <h3 className="text-2xl font-bold text-primary mb-4">HisaabHub</h3>
                         <p className="text-slate-400 mb-6">
                             India's most trusted tax filing and financial planning platform. Making taxes simple, accurate, and stress-free for everyone.
                         </p>
@@ -60,16 +60,16 @@ const Footer = () => {
                             </li>
                             <li className="flex items-center">
                                 <Mail className="h-5 w-5 mr-3 text-primary flex-shrink-0" />
-                                <span>support@hisabhub.com</span>
+                                <span>support@hisaabhub.com</span>
                             </li>
                         </ul>
                     </div>
                 </div>
 
                 <div className="border-t border-white/10 pt-8 text-center text-slate-500 text-sm">
-                    <p>&copy; {new Date().getFullYear()} HisabHub Financial Services Pvt Ltd. All rights reserved.</p>
+                    <p>&copy; {new Date().getFullYear()} HisaabHub Financial Services Pvt Ltd. All rights reserved.</p>
                     <p className="mt-2">
-                        Disclaimer: HisabHub is an authorized E-Return Intermediary. Tax estimates are indicative.
+                        Disclaimer: HisaabHub is an authorized E-Return Intermediary. Tax estimates are indicative.
                     </p>
                 </div>
             </div>
