@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { Menu, X, Phone } from 'lucide-react';
 
 interface NavbarProps {
@@ -8,9 +9,33 @@ interface NavbarProps {
 
 const Navbar: React.FC<NavbarProps> = ({ onLogin, onRegister }) => {
     const [isOpen, setIsOpen] = useState(false);
+    const location = useLocation();
+    const navigate = useNavigate();
 
     const handleEnquiry = () => {
         window.location.href = 'tel:+919876543210'; // Replace with your actual phone number
+    };
+
+    const handleLogoClick = () => {
+        if (location.pathname === '/') {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        } else {
+            navigate('/');
+            // Scroll happens automatically on navigation usually, but we can ensure it
+            window.scrollTo(0, 0);
+        }
+    };
+
+    const handleNavClick = (hash: string) => {
+        setIsOpen(false);
+        if (location.pathname !== '/') {
+            navigate('/' + hash);
+        } else {
+            const element = document.querySelector(hash);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
     };
 
     return (
@@ -20,7 +45,7 @@ const Navbar: React.FC<NavbarProps> = ({ onLogin, onRegister }) => {
                     {/* Desktop Layout */}
                     <div className="hidden md:flex justify-between h-20 items-center">
                         {/* Logo */}
-                        <div className="flex-shrink-0 flex items-center cursor-pointer">
+                        <div onClick={handleLogoClick} className="flex-shrink-0 flex items-center cursor-pointer">
                             <img
                                 src="/assets/Group 26 (1).svg"
                                 alt="HisabHub - Accountancy Firm"
@@ -30,10 +55,10 @@ const Navbar: React.FC<NavbarProps> = ({ onLogin, onRegister }) => {
 
                         {/* Desktop Menu */}
                         <div className="flex space-x-8 items-center">
-                            <a href="#file-itr" className="text-slate-300 hover:text-primary font-medium transition-colors">File ITR</a>
-                            <a href="#gst" className="text-slate-300 hover:text-primary font-medium transition-colors">GST</a>
-                            <a href="#tools" className="text-slate-300 hover:text-primary font-medium transition-colors">Tools</a>
-                            <a href="#learn" className="text-slate-300 hover:text-primary font-medium transition-colors">Learn</a>
+                            <button onClick={() => handleNavClick('#file-itr')} className="text-slate-300 hover:text-primary font-medium transition-colors">File ITR</button>
+                            <button onClick={() => handleNavClick('#gst')} className="text-slate-300 hover:text-primary font-medium transition-colors">GST</button>
+                            <button onClick={() => handleNavClick('#tools')} className="text-slate-300 hover:text-primary font-medium transition-colors">Tools</button>
+                            <button onClick={() => handleNavClick('#learn')} className="text-slate-300 hover:text-primary font-medium transition-colors">Learn</button>
                         </div>
 
                         {/* Auth Buttons */}
@@ -65,7 +90,7 @@ const Navbar: React.FC<NavbarProps> = ({ onLogin, onRegister }) => {
                         </button>
 
                         {/* Center: Logo */}
-                        <div className="absolute left-1/2 transform -translate-x-1/2">
+                        <div onClick={handleLogoClick} className="absolute left-1/2 transform -translate-x-1/2 cursor-pointer">
                             <img
                                 src="/assets/Group 26 (1).svg"
                                 alt="HisabHub"
@@ -117,34 +142,30 @@ const Navbar: React.FC<NavbarProps> = ({ onLogin, onRegister }) => {
                 {/* Sidebar Content */}
                 <div className="p-4 space-y-2">
                     {/* Navigation Links */}
-                    <a
-                        href="#file-itr"
-                        onClick={() => setIsOpen(false)}
-                        className="block px-4 py-3 text-base font-medium text-slate-300 hover:text-primary hover:bg-primary/10 rounded-lg transition-all"
+                    <button
+                        onClick={() => handleNavClick('#file-itr')}
+                        className="block w-full text-left px-4 py-3 text-base font-medium text-slate-300 hover:text-primary hover:bg-primary/10 rounded-lg transition-all"
                     >
                         File ITR
-                    </a>
-                    <a
-                        href="#gst"
-                        onClick={() => setIsOpen(false)}
-                        className="block px-4 py-3 text-base font-medium text-slate-300 hover:text-primary hover:bg-primary/10 rounded-lg transition-all"
+                    </button>
+                    <button
+                        onClick={() => handleNavClick('#gst')}
+                        className="block w-full text-left px-4 py-3 text-base font-medium text-slate-300 hover:text-primary hover:bg-primary/10 rounded-lg transition-all"
                     >
                         GST
-                    </a>
-                    <a
-                        href="#tools"
-                        onClick={() => setIsOpen(false)}
-                        className="block px-4 py-3 text-base font-medium text-slate-300 hover:text-primary hover:bg-primary/10 rounded-lg transition-all"
+                    </button>
+                    <button
+                        onClick={() => handleNavClick('#tools')}
+                        className="block w-full text-left px-4 py-3 text-base font-medium text-slate-300 hover:text-primary hover:bg-primary/10 rounded-lg transition-all"
                     >
                         Tools
-                    </a>
-                    <a
-                        href="#learn"
-                        onClick={() => setIsOpen(false)}
-                        className="block px-4 py-3 text-base font-medium text-slate-300 hover:text-primary hover:bg-primary/10 rounded-lg transition-all"
+                    </button>
+                    <button
+                        onClick={() => handleNavClick('#learn')}
+                        className="block w-full text-left px-4 py-3 text-base font-medium text-slate-300 hover:text-primary hover:bg-primary/10 rounded-lg transition-all"
                     >
                         Learn
-                    </a>
+                    </button>
 
                     {/* Divider */}
                     <div className="border-t border-white/10 my-4"></div>

@@ -34,7 +34,7 @@ const Footer = () => {
                             <li><a href="#" className="hover:text-primary transition-colors">GST Registration</a></li>
                             <li><a href="#" className="hover:text-primary transition-colors">GST Filing</a></li>
                             <li><a href="#" className="hover:text-primary transition-colors">Tax Planning</a></li>
-                            <li><a href="#" className="hover:text-primary transition-colors">Mutual Funds</a></li>
+
                         </ul>
                     </div>
 
