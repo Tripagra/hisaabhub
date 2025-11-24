@@ -13,7 +13,7 @@ const Navbar: React.FC<NavbarProps> = ({ onLogin, onRegister }) => {
     const navigate = useNavigate();
 
     const handleEnquiry = () => {
-        window.location.href = 'tel:+919876543210'; // Replace with your actual phone number
+        window.location.href = 'tel:+919557352327';
     };
 
     const handleLogoClick = () => {
