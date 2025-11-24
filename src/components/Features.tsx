@@ -24,7 +24,7 @@ const features = [
         action: 'service',
     },
     {
-        name: 'GST Software',
+        name: 'GST Filing',
         description: 'Complete GST solution for businesses. Invoicing, filing, and reconciliation made easy.',
         icon: Briefcase,
         color: 'bg-orange-500/10 text-orange-400',
