@@ -1,39 +1,90 @@
 {
   "name": "hisabhub",
+  "version": "1.0.0",
   "private": true,
-  "version": "0.0.0",
-  "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc -b && vite build",
-    "lint": "eslint .",
-    "preview": "vite preview"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "lint:fix": "next lint --fix",
+    "type-check": "tsc --noEmit",
+    "test": "vitest",
+    "test:watch": "vitest --watch",
+    "test:ui": "vitest --ui",
+    "test:coverage": "vitest --coverage",
+    "analyze": "cross-env ANALYZE=true next build",
+    "prepare": "husky install"
   },
   "dependencies": {
+    "@hookform/resolvers": "^3.10.0",
+    "@radix-ui/react-dialog": "^1.1.2",
+    "@radix-ui/react-dropdown-menu": "^2.1.2",
+    "@radix-ui/react-toast": "^1.2.2",
+    "@supabase/ssr": "^0.5.2",
     "@supabase/supabase-js": "^2.84.0",
+    "@tanstack/react-query": "^5.62.7",
+    "clsx": "^2.1.1",
+    "date-fns": "^4.1.0",
+    "framer-motion": "^11.15.0",
     "lucide-react": "^0.554.0",
-    "react": "^19.2.0",
-    "react-dom": "^19.2.0",
-    "react-router-dom": "^7.9.6"
+    "next": "^15.1.4",
+    "next-themes": "^0.4.4",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-hook-form": "^7.53.2",
+    "react-hot-toast": "^2.4.1",
+    "sharp": "^0.33.5",
+    "tailwind-merge": "^2.5.4",
+    "zod": "^3.24.1",
+    "zustand": "^5.0.2"
   },
   "devDependencies": {
-    "@eslint/js": "^9.39.1",
+    "@next/bundle-analyzer": "^15.1.4",
+    "@tanstack/react-query-devtools": "^5.62.7",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.1.0",
+    "@testing-library/user-event": "^14.5.2",
     "@types/node": "^24.10.1",
-    "@types/react": "^19.2.5",
-    "@types/react-dom": "^19.2.3",
-    "@vitejs/plugin-react": "^5.1.1",
+    "@types/react": "^18.3.17",
+    "@types/react-dom": "^18.3.5",
+    "@typescript-eslint/eslint-plugin": "^8.46.4",
+    "@typescript-eslint/parser": "^8.46.4",
+    "@vitest/coverage-v8": "^4.0.17",
+    "@vitest/ui": "^4.0.17",
     "autoprefixer": "^10.4.22",
-    "eslint": "^9.39.1",
-    "eslint-plugin-react-hooks": "^7.0.1",
-    "eslint-plugin-react-refresh": "^0.4.24",
-    "globals": "^16.5.0",
+    "cross-env": "^7.0.3",
+    "eslint": "^8.57.1",
+    "eslint-config-next": "^15.1.4",
+    "husky": "^9.1.7",
+    "jsdom": "^26.0.0",
+    "lint-staged": "^15.2.10",
     "postcss": "^8.5.6",
+    "prettier": "^3.4.2",
     "tailwindcss": "^3.4.17",
-    "typescript": "~5.9.3",
-    "typescript-eslint": "^8.46.4",
-    "vite": "npm:rolldown-vite@7.2.5"
+    "typescript": "^5.7.2",
+    "vitest": "^4.0.17"
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{json,md}": [
+      "prettier --write"
+    ]
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
   },
   "overrides": {
-    "vite": "npm:rolldown-vite@7.2.5"
+    "glob": "^11.0.0",
+    "tar": "^7.5.4",
+    "axios": "^1.7.9",
+    "ejs": "^3.1.10",
+    "lodash.trim": "^4.5.1",
+    "lodash.trimend": "^4.5.1",
+    "yargs-parser": "^21.1.1"
   }
 }

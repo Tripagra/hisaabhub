@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { Facebook, Twitter, Linkedin, Instagram, Mail, Phone, MapPin } from 'lucide-react';
 
 const Footer = () => {
@@ -9,7 +9,7 @@ const Footer = () => {
                     <div>
                         <h3 className="text-2xl font-bold text-primary mb-4">HisaabHub</h3>
                         <p className="text-slate-400 mb-6">
-                            India's most trusted tax filing and financial planning platform. Making taxes simple, accurate, and stress-free for everyone.
+                            India&apos;s most trusted tax filing and financial planning platform. Making taxes simple, accurate, and stress-free for everyone.
                         </p>
                         <div className="flex space-x-4">
                             <a href="#" className="text-slate-400 hover:text-primary transition-colors">
@@ -30,20 +30,20 @@ const Footer = () => {
                     <div>
                         <h4 className="text-lg font-semibold mb-6 text-white">Services</h4>
                         <ul className="space-y-3 text-slate-400">
-                            <li><Link to="/#file-itr" className="hover:text-primary transition-colors">E-Filing Income Tax</Link></li>
-                            <li><Link to="/#gst" className="hover:text-primary transition-colors">GST Registration</Link></li>
-                            <li><Link to="/#gst" className="hover:text-primary transition-colors">GST Filing</Link></li>
-                            <li><Link to="/#tools" className="hover:text-primary transition-colors">Tax Planning</Link></li>
+                            <li><Link href="/#file-itr" className="hover:text-primary transition-colors">E-Filing Income Tax</Link></li>
+                            <li><Link href="/#gst" className="hover:text-primary transition-colors">GST Registration</Link></li>
+                            <li><Link href="/#gst" className="hover:text-primary transition-colors">GST Filing</Link></li>
+                            <li><Link href="/#tools" className="hover:text-primary transition-colors">Tax Planning</Link></li>
                         </ul>
                     </div>
 
                     <div>
                         <h4 className="text-lg font-semibold mb-6 text-white">Company</h4>
                         <ul className="space-y-3 text-slate-400">
-                            <li><Link to="/about" className="hover:text-primary transition-colors">About Us</Link></li>
-                            <li><Link to="/privacy" className="hover:text-primary transition-colors">Privacy Policy</Link></li>
-                            <li><Link to="/terms" className="hover:text-primary transition-colors">Terms of Service</Link></li>
-                            <li><Link to="/refund" className="hover:text-primary transition-colors">Refund Policy</Link></li>
+                            <li><Link href="/about" className="hover:text-primary transition-colors">About Us</Link></li>
+                            <li><Link href="/privacy" className="hover:text-primary transition-colors">Privacy Policy</Link></li>
+                            <li><Link href="/terms" className="hover:text-primary transition-colors">Terms of Service</Link></li>
+                            <li><Link href="/refund" className="hover:text-primary transition-colors">Refund Policy</Link></li>
                         </ul>
                     </div>
 

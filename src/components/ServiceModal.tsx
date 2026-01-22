@@ -1,6 +1,8 @@
+'use client';
+
 import React, { useState } from 'react';
 import { X, Send } from 'lucide-react';
-import { supabase } from '../lib/supabase';
+import { createSupabaseClient } from '../lib/supabase';
 import LoadingSpinner from './LoadingSpinner';
 
 interface ServiceModalProps {
@@ -32,18 +34,16 @@ const ServiceModal: React.FC<ServiceModalProps> = ({ isOpen, onClose, serviceNam
         setError(null);
 
         try {
+            const supabase = createSupabaseClient();
             const { error: dbError } = await supabase
                 .from('service_inquiries')
-                .insert([
-                    {
-                        service_name: serviceName,
-                        name: formData.name,
-                        email: formData.email,
-                        phone: formData.phone,
-                        message: formData.message || null,
-                        created_at: new Date().toISOString(),
-                    }
-                ]);
+                .insert({
+                    service_name: serviceName,
+                    name: formData.name,
+                    email: formData.email,
+                    phone: formData.phone,
+                    message: formData.message || null,
+                });
 
             if (dbError) throw dbError;
 

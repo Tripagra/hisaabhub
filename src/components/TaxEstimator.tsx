@@ -1,4 +1,6 @@
 
+'use client';
+
 import { useState, useEffect } from 'react';
 import { Calculator, RefreshCw } from 'lucide-react';
 
@@ -18,8 +20,8 @@ const TaxEstimator = () => {
         // FY 2024-25 (AY 2025-26) New Regime
         const STANDARD_DEDUCTION = salaried ? 75000 : 0;
 
-        let grossIncome = incomeAmount;
-        let taxableIncome = Math.max(0, grossIncome - STANDARD_DEDUCTION);
+        const grossIncome = incomeAmount;
+        const taxableIncome = Math.max(0, grossIncome - STANDARD_DEDUCTION);
         let tax = 0;
 
         // Slabs

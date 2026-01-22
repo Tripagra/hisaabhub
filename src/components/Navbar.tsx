@@ -1,5 +1,7 @@
+'use client';
+
 import { useState } from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { usePathname, useRouter } from 'next/navigation';
 import { Menu, X, Phone } from 'lucide-react';
 
 interface NavbarProps {
@@ -9,18 +11,18 @@ interface NavbarProps {
 
 const Navbar: React.FC<NavbarProps> = ({ onLogin, onRegister }) => {
     const [isOpen, setIsOpen] = useState(false);
-    const location = useLocation();
-    const navigate = useNavigate();
+    const pathname = usePathname();
+    const router = useRouter();
 
     const handleEnquiry = () => {
         window.location.href = 'tel:+919557352327';
     };
 
     const handleLogoClick = () => {
-        if (location.pathname === '/') {
+        if (pathname === '/') {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         } else {
-            navigate('/');
+            router.push('/');
             // Scroll happens automatically on navigation usually, but we can ensure it
             window.scrollTo(0, 0);
         }
@@ -28,8 +30,8 @@ const Navbar: React.FC<NavbarProps> = ({ onLogin, onRegister }) => {
 
     const handleNavClick = (hash: string) => {
         setIsOpen(false);
-        if (location.pathname !== '/') {
-            navigate('/' + hash);
+        if (pathname !== '/') {
+            router.push('/' + hash);
         } else {
             const element = document.querySelector(hash);
             if (element) {

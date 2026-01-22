@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { ChevronRight, Clock, User } from 'lucide-react';
 import { articles } from '../data/articles';
 
@@ -22,7 +22,7 @@ const LearnPage: React.FC = () => {
                     {articles.map((article) => (
                         <Link
                             key={article.id}
-                            to={`/article/${article.id}`}
+                            href={`/article/${article.id}`}
                             className="group bg-dark-surface border border-white/10 rounded-2xl p-6 hover:border-primary/50 transition-all duration-300 cursor-pointer hover:transform hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary/20 block"
                         >
                             {/* Icon */}

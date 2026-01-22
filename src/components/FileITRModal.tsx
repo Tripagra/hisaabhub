@@ -1,6 +1,8 @@
+'use client';
+
 import React, { useState } from 'react';
 import { X, Send } from 'lucide-react';
-import { supabase } from '../lib/supabase';
+import { createSupabaseClient } from '../lib/supabase';
 import LoadingSpinner from './LoadingSpinner';
 
 interface FileITRModalProps {
@@ -32,17 +34,15 @@ const FileITRModal: React.FC<FileITRModalProps> = ({ isOpen, onClose }) => {
         setError(null);
 
         try {
+            const supabase = createSupabaseClient();
             const { error: dbError } = await supabase
                 .from('itr_requests')
-                .insert([
-                    {
-                        name: formData.name,
-                        email: formData.email,
-                        phone: formData.phone,
-                        pan: formData.pan || null,
-                        created_at: new Date().toISOString(),
-                    }
-                ]);
+                .insert({
+                    name: formData.name,
+                    email: formData.email,
+                    phone: formData.phone,
+                    pan: formData.pan || null,
+                });
 
             if (dbError) throw dbError;
 

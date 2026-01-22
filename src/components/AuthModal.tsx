@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { X, Mail, Lock, User, Phone, ArrowRight } from 'lucide-react';
-import { supabase } from '../lib/supabase';
+import { createSupabaseClient } from '../lib/supabase';
 import LoadingSpinner from './LoadingSpinner';
 
 interface AuthModalProps {
@@ -33,6 +33,8 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose, initialMode }) =
         setError(null);
 
         try {
+            const supabase = createSupabaseClient();
+            
             if (mode === 'register') {
                 // Register user with Supabase Auth
                 const { data: authData, error: authError } = await supabase.auth.signUp({
@@ -46,15 +48,12 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose, initialMode }) =
                 if (authData.user) {
                     const { error: dbError } = await supabase
                         .from('users')
-                        .insert([
-                            {
-                                id: authData.user.id,
-                                email: formData.email,
-                                name: formData.name,
-                                phone: formData.phone,
-                                created_at: new Date().toISOString(),
-                            }
-                        ]);
+                        .insert({
+                            id: authData.user.id,
+                            email: formData.email,
+                            name: formData.name,
+                            phone: formData.phone,
+                        });
 
                     if (dbError) throw dbError;
                 }
