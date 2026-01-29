@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Script from 'next/script';
 import { Inter } from 'next/font/google';
 import { Providers } from './providers';
 import { ErrorBoundary } from '@/components/ErrorBoundary';
@@ -63,6 +64,8 @@ export const metadata: Metadata = {
   },
 };
 
+
+
 export default function RootLayout({
   children,
 }: {
@@ -71,6 +74,21 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
+        {/* Google Analytics */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-XK2LQR976J"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-XK2LQR976J');
+          `}
+        </Script>
+
         <ErrorBoundary>
           <Providers>
             {children}

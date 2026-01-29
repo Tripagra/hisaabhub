@@ -61,6 +61,7 @@ const Navbar: React.FC<NavbarProps> = ({ onLogin, onRegister }) => {
                             <button onClick={() => handleNavClick('#gst')} className="text-slate-300 hover:text-primary font-medium transition-colors">GST</button>
                             <button onClick={() => handleNavClick('#tools')} className="text-slate-300 hover:text-primary font-medium transition-colors">Tools</button>
                             <button onClick={() => handleNavClick('#learn')} className="text-slate-300 hover:text-primary font-medium transition-colors">Learn</button>
+                            <button onClick={() => router.push('/aeo')} className="text-slate-300 hover:text-primary font-medium transition-colors">News</button>
                         </div>
 
                         {/* Auth Buttons */}
@@ -167,6 +168,15 @@ const Navbar: React.FC<NavbarProps> = ({ onLogin, onRegister }) => {
                         className="block w-full text-left px-4 py-3 text-base font-medium text-slate-300 hover:text-primary hover:bg-primary/10 rounded-lg transition-all"
                     >
                         Learn
+                    </button>
+                    <button
+                        onClick={() => {
+                            router.push('/aeo');
+                            setIsOpen(false);
+                        }}
+                        className="block w-full text-left px-4 py-3 text-base font-medium text-slate-300 hover:text-primary hover:bg-primary/10 rounded-lg transition-all"
+                    >
+                        News
                     </button>
 
                     {/* Divider */}
