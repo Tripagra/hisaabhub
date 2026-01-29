@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
+import Link from 'next/link';
 import { createServerSupabaseClient, createAdminSupabaseClient } from '@/lib/supabaseServer';
 import type { ArticleWithQuestions } from '@/types/article';
 import {
@@ -165,9 +166,9 @@ export default async function AEOArticlePage({
 
                     {/* Breadcrumb - Top */}
                     <nav className="mb-6 text-sm flex items-center space-x-2 text-gray-500">
-                        <a href="/" className="hover:text-primary transition-colors">Home</a>
+                        <Link href="/" className="hover:text-primary transition-colors">Home</Link>
                         <span>&gt;</span>
-                        <a href="/aeo" className="hover:text-primary transition-colors">Tax News</a>
+                        <Link href="/aeo" className="hover:text-primary transition-colors">Tax News</Link>
                         <span>&gt;</span>
                         <span className="text-gray-300 truncate max-w-[300px]">{article.keyword}</span>
                     </nav>
@@ -235,9 +236,9 @@ export default async function AEOArticlePage({
                                                 <h4 className="text-white font-bold mb-1">Need help filing taxes?</h4>
                                                 <p className="text-sm text-gray-400">Get expert assistance from CA professionals today.</p>
                                             </div>
-                                            <a href="/" className="btn-primary whitespace-nowrap px-5 py-2.5 text-sm font-bold">
+                                            <Link href="/" className="btn-primary whitespace-nowrap px-5 py-2.5 text-sm font-bold">
                                                 File Now
-                                            </a>
+                                            </Link>
                                         </div>
                                     </div>
                                 </section>
