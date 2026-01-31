@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next';
 import { createAdminSupabaseClient } from '@/lib/supabaseServer';
 
-export const revalidate = 3600; // Revalidate every hour
+export const revalidate = 300; // Revalidate every 5 minutes
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     const baseUrl = process.env.NEXT_PUBLIC_APP_URL || 'https://hisabhub.com';

@@ -223,6 +223,16 @@ export async function POST(request: NextRequest) {
             },
         };
 
+        // Revalidate sitemap and article listing page immediately
+        try {
+            const { revalidatePath } = await import('next/cache');
+            revalidatePath('/sitemap.xml');
+            revalidatePath('/aeo');
+        } catch (revalidateError) {
+            console.error('Error revalidating paths:', revalidateError);
+            // Don't fail the request if revalidation fails
+        }
+
         return NextResponse.json(response, { status: 201 });
     } catch (error) {
         console.error('Unexpected error in POST /api/articles:', error);
