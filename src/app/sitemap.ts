@@ -22,18 +22,29 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     }));
 
     // 2. Dynamic Routes (Articles)
-    const supabase = createAdminSupabaseClient();
-    const { data: articles } = await supabase
-        .from('articles')
-        .select('slug, updated_at')
-        .eq('published', true);
+    let articleRoutes: MetadataRoute.Sitemap = [];
 
-    const articleRoutes = (articles || []).map((article) => ({
-        url: `${baseUrl}/aeo/${article.slug}`,
-        lastModified: new Date(article.updated_at),
-        changeFrequency: 'weekly' as const,
-        priority: 0.7,
-    }));
+    try {
+        const supabase = createAdminSupabaseClient();
+        const { data: articles, error } = await supabase
+            .from('articles')
+            .select('slug, updated_at')
+            .eq('published', true);
+
+        if (error) {
+            console.error('Sitemap: Error fetching articles:', error);
+        } else if (articles && articles.length > 0) {
+            articleRoutes = articles.map((article) => ({
+                url: `${baseUrl}/aeo/${article.slug}`,
+                lastModified: new Date(article.updated_at),
+                changeFrequency: 'weekly' as const,
+                priority: 0.7,
+            }));
+        }
+    } catch (error) {
+        console.error('Sitemap: Unexpected error fetching articles:', error);
+        // Continue with static routes only
+    }
 
     return [...staticRoutes, ...articleRoutes];
 }

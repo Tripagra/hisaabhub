@@ -117,7 +117,9 @@ export const config = {
      * - _next/image (image optimization files)
      * - favicon.ico (favicon file)
      * - public folder
+     * - sitemap.xml (sitemap for search engines)
+     * - robots.txt (robots file for search engines)
      */
-    '/((?!_next/static|_next/image|favicon.ico|public/).*)',
+    '/((?!_next/static|_next/image|favicon.ico|public/|sitemap.xml|robots.txt).*)',
   ],
 };

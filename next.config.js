@@ -51,6 +51,13 @@ const nextConfig = {
       ...config.resolve.fallback,
       fs: false,
     };
+
+    // Suppress known benign warnings from Supabase in Edge Runtime
+    config.ignoreWarnings = [
+      { module: /node_modules\/@supabase\/realtime-js/ },
+      { module: /node_modules\/@supabase\/supabase-js/ },
+    ];
+
     return config;
   },
   // Security improvements
