@@ -60,37 +60,43 @@ export async function middleware(req: NextRequest) {
     data: { session },
   } = await supabase.auth.getSession();
 
-  // Protected routes (excluding AEO admin for now)
+  // Protected routes
   const protectedRoutes = ['/dashboard', '/profile'];
   const isProtectedRoute = protectedRoutes.some(route =>
     req.nextUrl.pathname.startsWith(route)
   );
 
-  // Allow /admin/aeo routes without authentication (for testing)
-  const isAEOAdminRoute = req.nextUrl.pathname.startsWith('/admin/aeo');
-
-  // Redirect to login if accessing protected route without session
-  if (isProtectedRoute && !session && !isAEOAdminRoute) {
-    const redirectUrl = new URL('/login', req.url);
-    redirectUrl.searchParams.set('redirectTo', req.nextUrl.pathname);
-    return NextResponse.redirect(redirectUrl);
-  }
-
-  // Admin routes
+  // Admin routes - all routes under /admin require admin role
   const adminRoutes = ['/admin'];
   const isAdminRoute = adminRoutes.some(route =>
     req.nextUrl.pathname.startsWith(route)
   );
 
-  if (isAdminRoute && session && !isAEOAdminRoute) {
-    // Check if user has admin role
-    const { data: profile } = await supabase
+  // Redirect to login if accessing protected route without session
+  if (isProtectedRoute && !session) {
+    const redirectUrl = new URL('/login', req.url);
+    redirectUrl.searchParams.set('redirectTo', req.nextUrl.pathname);
+    return NextResponse.redirect(redirectUrl);
+  }
+
+  // Admin route protection with role-based access control
+  if (isAdminRoute) {
+    // Require authentication for all admin routes
+    if (!session) {
+      const redirectUrl = new URL('/login', req.url);
+      redirectUrl.searchParams.set('redirectTo', req.nextUrl.pathname);
+      return NextResponse.redirect(redirectUrl);
+    }
+
+    // Validate admin role from database
+    const { data: profile, error } = await supabase
       .from('users')
       .select('role')
       .eq('id', session.user.id)
       .single();
 
-    if (profile?.role !== 'admin') {
+    // If user doesn't exist in users table or doesn't have admin role, deny access
+    if (error || !profile || profile.role !== 'admin') {
       return NextResponse.redirect(new URL('/', req.url));
     }
   }

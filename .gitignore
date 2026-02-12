@@ -29,6 +29,16 @@ yarn-error.log*
 .env
 .env*.local
 
+# Admin credentials (NEVER commit these!)
+*credentials*.txt
+*credentials*.md
+*password*.txt
+*admin-access*.txt
+ADMIN_CREDENTIALS.md
+admin-credentials.md
+credentials.json
+.credentials
+
 # Vercel
 .vercel
 

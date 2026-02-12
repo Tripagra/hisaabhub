@@ -7,8 +7,10 @@ CREATE TABLE IF NOT EXISTS public.users (
     email TEXT NOT NULL UNIQUE,
     name TEXT NOT NULL,
     phone TEXT,
+    role TEXT DEFAULT 'user',
     created_at TIMESTAMPTZ DEFAULT NOW(),
-    updated_at TIMESTAMPTZ DEFAULT NOW()
+    updated_at TIMESTAMPTZ DEFAULT NOW(),
+    CONSTRAINT users_role_check CHECK (role IN ('user', 'admin'))
 );
 
 -- 2. ITR Filing Requests table
@@ -74,6 +76,8 @@ CREATE POLICY "Users can view their own service inquiries"
 
 -- Create indexes for better performance
 CREATE INDEX IF NOT EXISTS idx_users_email ON public.users(email);
+CREATE INDEX IF NOT EXISTS idx_users_role ON public.users(role);
+CREATE INDEX IF NOT EXISTS idx_users_admin_role ON public.users(role) WHERE role = 'admin';
 CREATE INDEX IF NOT EXISTS idx_itr_requests_email ON public.itr_requests(email);
 CREATE INDEX IF NOT EXISTS idx_itr_requests_created_at ON public.itr_requests(created_at DESC);
 CREATE INDEX IF NOT EXISTS idx_service_inquiries_email ON public.service_inquiries(email);
