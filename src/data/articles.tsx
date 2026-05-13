@@ -32,21 +32,26 @@ India follows a **three-tier federal structure** of taxation:
 - **State Government**: GST (partial), Stamp Duty, Professional Tax
 - **Local Bodies**: Property Tax, Municipal Taxes
 
-## Income Tax Slabs for FY 2024-25
+## Income Tax Slabs for FY 2025-26 (AY 2026-27)
 
-### New Tax Regime (Default)
-- ₹0 - ₹3,00,000: Nil
-- ₹3,00,001 - ₹7,00,000: 5%
-- ₹7,00,001 - ₹10,00,000: 10%
-- ₹10,00,001 - ₹12,00,000: 15%
-- ₹12,00,001 - ₹15,00,000: 20%
-- Above ₹15,00,000: 30%
+### New Tax Regime — Default (Budget 2025 Revised)
+- ₹0 – ₹4,00,000: **Nil**
+- ₹4,00,001 – ₹8,00,000: **5%**
+- ₹8,00,001 – ₹12,00,000: **10%**
+- ₹12,00,001 – ₹16,00,000: **15%**
+- ₹16,00,001 – ₹20,00,000: **20%**
+- ₹20,00,001 – ₹24,00,000: **25%**
+- Above ₹24,00,000: **30%**
+
+**Key benefit**: Rebate u/s 87A raised to ₹60,000 → income up to ₹12L is effectively **zero tax**. Salaried employees get ₹75,000 standard deduction → nil tax up to ₹12.75L.
 
 ### Old Tax Regime (Optional)
-- ₹0 - ₹2,50,000: Nil
-- ₹2,50,001 - ₹5,00,000: 5%
-- ₹5,00,001 - ₹10,00,000: 20%
-- Above ₹10,00,000: 30%
+- ₹0 – ₹2,50,000: **Nil**
+- ₹2,50,001 – ₹5,00,000: **5%**
+- ₹5,00,001 – ₹10,00,000: **20%**
+- Above ₹10,00,000: **30%**
+
+Rebate u/s 87A: ₹12,500 for income up to ₹5L. Standard deduction: ₹50,000 (salaried).
 
 ## Key Components
 
@@ -70,15 +75,17 @@ Taxes collected by intermediaries:
 - Company directors
 - High-value transactions (property, shares, etc.)
 
-## Important Deadlines
-- **Individuals**: July 31st (for previous financial year)
-- **Businesses**: October 31st
-- **Audit Cases**: September 30th
+## Important Deadlines (FY 2025-26)
+- **Individuals (Non-Audit)**: 31st July 2026
+- **Businesses / Audit Cases**: 31st October 2026
+- **Transfer Pricing Cases**: 30th November 2026
+- **Belated / Revised ITR**: 31st December 2026
 
 ## Penalties for Non-Compliance
-- Late filing: ₹5,000 (₹1,000 if income < ₹5 lakhs)
-- Tax evasion: 100-300% of tax amount
-- Non-filing: Prosecution under Section 276CC
+- Late filing fee: ₹5,000 (₹1,000 if income ≤ ₹5 lakhs)
+- Interest u/s 234A: 1% per month on unpaid tax
+- Tax evasion: 100–300% of tax + possible imprisonment
+- Non-filing u/s 276CC: Prosecution for wilful default
         `
     },
     {
@@ -270,11 +277,11 @@ Smart tax planning can significantly reduce your tax liability while building we
 - Only domestic travel
 - Actual travel cost or LTA received (whichever is lower)
 
-## Standard Deduction: ₹50,000
+## Standard Deduction: ₹75,000 (New Regime) / ₹50,000 (Old Regime)
 
-- Available to all salaried individuals
-- No documentation required
-- Automatic deduction from gross salary
+- Raised to ₹75,000 under New Regime in Budget 2025
+- Old Regime retains ₹50,000 standard deduction
+- No documentation required — automatic deduction
 
 ## Advanced Tax Planning Strategies
 
@@ -299,17 +306,18 @@ Optimize components:
 - Advance deductions to current FY
 - Strategic bonus/incentive timing
 
-## Tax Regime Comparison
+## Tax Regime Comparison (FY 2025-26)
+
+### When to Choose New Regime? ✅ (Recommended for most)
+- Income up to ₹12.75L (salaried) → **zero tax**
+- Fewer deductions / investments
+- Higher income above ₹15L with minimal 80C
+- Simpler filing — no investment proofs needed
 
 ### When to Choose Old Regime?
-- Multiple deductions (80C, 80D, HRA)
-- Home loan interest
-- High investment in tax-saving instruments
-
-### When to Choose New Regime?
-- Minimal deductions
-- Higher income (>₹15 lakhs)
-- Simple tax filing preference
+- Heavy 80C + 80D + HRA + Home Loan interest
+- Deductions exceed ₹3.75L (breakeven point)
+- Specific allowances like LTA, meal coupons claimed
 
 ## Common Tax-Saving Mistakes
 
