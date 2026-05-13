@@ -116,7 +116,7 @@ const LearnPage: React.FC = () => {
                 {filtered.length === 0 ? (
                     <div className="text-center py-16 text-slate-500">
                         <BookOpen className="w-10 h-10 mx-auto mb-3 opacity-30" />
-                        <p className="font-medium">No articles found for "{search}"</p>
+                        <p className="font-medium">No articles found for &quot;{search}&quot;</p>
                     </div>
                 ) : (
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
