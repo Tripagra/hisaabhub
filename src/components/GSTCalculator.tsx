@@ -6,6 +6,7 @@ import {
     TrendingUp, TrendingDown, IndianRupee, Info, ClipboardCheck,
     ShieldCheck, Zap, AlertTriangle, Clock, Bell, ExternalLink,
 } from 'lucide-react';
+import EWayBillModal from './EWayBillModal';
 
 // ── Helpers ───────────────────────────────────────────────────────────────────
 
@@ -76,6 +77,7 @@ const GSTCalculator: React.FC = () => {
     const [mobile, setMobile] = useState('');
     const [callbackSent, setCallbackSent] = useState(false);
     const [mobileError, setMobileError] = useState('');
+    const [isEWayModalOpen, setIsEWayModalOpen] = useState(false);
     const [dl, setDl] = useState(getDeadlineState());
     const leadRef = useRef<HTMLDivElement>(null);
 
@@ -287,7 +289,7 @@ const GSTCalculator: React.FC = () => {
                                     <p className="text-slate-300 text-xs leading-relaxed mb-3">
                                         Invoice exceeds <strong className="text-white">₹50,000</strong>. An <strong className="text-white">E-Way Bill</strong> is legally mandatory to transport these goods (GST Rule 138).
                                     </p>
-                                    <button onClick={() => leadRef.current?.scrollIntoView({ behavior: 'smooth' })}
+                                    <button onClick={() => setIsEWayModalOpen(true)}
                                         className="inline-flex items-center gap-1.5 bg-primary/10 hover:bg-primary/20 border border-primary/30 text-primary font-bold text-xs px-4 py-2 rounded-lg transition-all active:scale-95">
                                         <ExternalLink className="w-3.5 h-3.5" /> Need an E-Way Bill? Get it in 5 mins.
                                     </button>
@@ -373,6 +375,8 @@ const GSTCalculator: React.FC = () => {
                     </div>
                 </div>
             </div>
+
+            <EWayBillModal isOpen={isEWayModalOpen} onClose={() => setIsEWayModalOpen(false)} />
         </section>
     );
 };
